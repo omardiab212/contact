@@ -1,0 +1,34 @@
+flutter_native_splash:
+
+  # or if you place this not in pubspec.yaml and not in flutter_native_splash.yaml:
+  # dart run flutter_native_splash:create -p ../your-filepath.yaml
+
+   android: true
+   ios: true
+   web: false
+
+   color: "#29384D"
+   color_ios: "#29384D"
+
+   image:                assets/images/splash.png
+   image_ios:            assets/images/splash.png
+
+   fullscreen: true                # default false
+    # if you dont want to hide notif bar, for android just set this to false,
+    # but for ios, add this to your flutter main():
+    # WidgetsFlutterBinding.ensureInitialized();
+    # SystemChrome.setEnabledSystemUIMode(SystemUiMode.manual, overlays: [SystemUiOverlay.bottom, SystemUiOverlay.top], );
+
+   android_12:
+
+    color: "#29384D"
+
+    # center-logo
+    # If this parameter is not specified, the app's launcher icon will be used instead.
+    # Please note that the splash screen will be clipped to a circle on the center of the screen.
+    # with background: 960×960 px (fit within circle 640px in diameter)
+    # without background: 1152×1152 px (fit within circle 768px in diameter)
+    # ensure that the most important design elements of your image are placed within a circular area
+    image: assets/images/splashAndroid.png
+
+

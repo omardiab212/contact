@@ -1,0 +1,22 @@
+ import 'package:contact/home_screen.dart';
+import 'package:flutter/material.dart';
+
+void main(){
+  runApp(myApp());
+ }
+
+ class myApp extends StatelessWidget {
+   const myApp({super.key});
+
+   @override
+   Widget build(BuildContext context) {
+     return MaterialApp(
+       debugShowCheckedModeBanner: false,
+       initialRoute: HomeScreen.routeName,
+
+       routes: {
+         HomeScreen.routeName : (_) => HomeScreen(),
+       },
+     );
+   }
+ }
